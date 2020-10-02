@@ -1,0 +1,43 @@
+.layui-footer {
+  text-align: center;
+}
+.layui-nav .layui-icon {
+  margin-right: 10px;
+}
+.layui-nav .layui-nav-child .layui-icon {
+  margin-left: 10px;
+}
+.layui-nav-item .icon-16 {
+  margin-right: 10px;
+}
+.user-info {
+  height: 61px;
+  position: relative;
+}
+.user-info .avatar {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background-color: skyblue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  line-height: 40px;
+  text-align: center;
+  transform: translate(-100%, -50%);
+}
+.user-info .welcome {
+  height: 61px;
+  line-height: 61px;
+  padding-left: 116px;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+#nav-info .avatar img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}

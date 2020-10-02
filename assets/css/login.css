@@ -1,0 +1,57 @@
+html,
+body {
+  height: 100%;
+  background: url('../images/login_bg.jpg');
+  background-size: cover;
+  overflow: hidden;
+}
+html img,
+body img {
+  position: absolute;
+  top: 50px;
+  left: 450px;
+}
+html .container,
+body .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 310px;
+  background-color: #fff;
+}
+html .container .title,
+body .container .title {
+  width: 400px;
+  height: 60px;
+  background: url('../images/login_title.png') no-repeat;
+  background-position: center;
+}
+html .container .layui-form,
+body .container .layui-form {
+  padding: 0 20px;
+}
+html .container .layui-form .link,
+body .container .layui-form .link {
+  text-align: right;
+  padding-top: 15px;
+}
+html .container .layui-form .layui-form-item,
+body .container .layui-form .layui-form-item {
+  position: relative;
+}
+html .container .layui-form .layui-form-item i,
+body .container .layui-form .layui-form-item i {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+}
+html .container .layui-form .layui-form-item input,
+body .container .layui-form .layui-form-item input {
+  padding-left: 30px;
+}
+html .container #reg-form,
+body .container #reg-form {
+  display: none;
+}
