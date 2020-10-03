@@ -3,9 +3,9 @@ function loadUserInfo() {
     $.ajax({
         type: 'get',
         url: 'my/userinfo',
-        headers: {
-            Authorization: sessionStorage.getItem('mytoken')
-        },
+        // headers: {
+        //     Authorization: sessionStorage.getItem('mytoken')
+        // },
         success: function (res) {
             if (res.status === 0) {
                 var userinfo = res.data;
@@ -31,7 +31,7 @@ $('#logout-btn').click(function () {
         title: '提示'
     }, function (index) {
         sessionStorage.removeItem('mytoken');
-        location.href = './login.html'
         layer.close(index);
+        location.href = './login.html'
     }); 
 })
