@@ -1,9 +1,12 @@
 var baseURL = 'http://ajax.frontend.itheima.net/'
 $.ajaxPrefilter(function (options) {
     options.beforeSend = function () {
-        NProgress.start();//在请求发送前调用开始进度条
+        window.NProgress && NProgress.start(); //在请求发送前调用开始进度条
+        // if (NProgress) {
+        //     NProgress.start()
+        // }
     }
-    
+
     if (options.url !== 'api/login' && options.url !== 'api/reguser') {
         options.headers = {
             Authorization: sessionStorage.getItem('mytoken')
@@ -16,7 +19,7 @@ $.ajaxPrefilter(function (options) {
 
     //jquery为我们提供了一个complete(),在请求发送完成后触发,不论这个请求时成功还是失败,都会触发该函数.
     options.complete = function (res) {
-        NProgress.done();//请求完成后调用结束进度条
+        window.NProgress && NProgress.done(); //请求完成后调用结束进度条
         if (res.responseJSON && res.responseJSON.status === 1 && res.responseJSON.message === '身份认证失败！') {
             sessionStorage.removeItem('mytoken');
             location.href = './login.html'
