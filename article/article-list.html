@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+    <script type="text/html" id="article-tel">
+           {{each data}}
+                <tr>
+                    <td>{{$value.title}}</td>
+                    <td>{{$value.cate_name}}</td>
+                    <td>{{$value.state}}</td>
+                    <td>{{$value.pub_date}}</td>
+                    <td>
+                        <button class="layui-btn layui-btn-sm">编辑</button>
+                        <button class="layui-btn layui-btn-danger layui-btn-sm">删除</button>
+                    </td>
+                </tr>
+           {{/each}}
+    </script>
+</head>
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">文章管理</div>
+        <div class="layui-card-body">
+            <table class="layui-table">
+                <colgroup>
+                    <col width="30%">
+                    <col width="20%">
+                    <col width="10%">
+                    <col width="20%">
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>文章名称</th>
+                        <th>分类</th>
+                        <th>状态</th>
+                        <th>发布时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="../assets/lib/layui/layui.all.js"></script>
+<script src="../assets/lib/jquery.js"></script>
+<script src="../assets/js/common.js"></script>
+<script src="../assets/lib/template-web.js"></script>
+<script src="../assets/js/article-list.js"></script>
+</html>
