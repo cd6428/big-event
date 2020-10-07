@@ -13,6 +13,7 @@ $(function () {
     $('#myfile').change(function (e) {
         var files = e.target.files;
         // console.log(files["0"]);
+        // console.log(files);
         var newUrl = URL.createObjectURL(files[0]);
         $('.cropper-box > img').cropper('destroy');
         $('#image').attr('src', newUrl);

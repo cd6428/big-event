@@ -10,7 +10,6 @@ $(function () {
             success: function (res) {
                 if (res.status === 0) {
                     var userinfo = res.data;
-                    console.log(userinfo);
                     if (userinfo.user_pic) {
                         $('#nav-info').html(`<div class="avatar">
                         <img src='${userinfo.user_pic}'/>
